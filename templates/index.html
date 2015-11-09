@@ -1,9 +1,19 @@
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
   <title>Advanced Validation Example</title>
 </head>
 <body>
-  <h1>Enter a Valid(Any) Email!</h1>
+  <h1>Registration</h1>
+  <form action='/process' method='POST'>
+    Email:<input type="text" name="email">    
+    First Name:<input type="text" name="fname">
+    Last Name:<input type="text" name="lname">
+    Password:<input type="text" name="password">
+    Confirm Password:<input type="text" name="confpassword">
+    Date of Birth:<input type='text' name='dob'>
+    <input type="submit" value="Submit">
+  </form>
   {% with messages = get_flashed_messages() %}
     {% if messages %}
       {% for message in messages %}
@@ -11,11 +21,5 @@
       {% endfor %}
     {% endif %}
   {% endwith %}
-  <form action='/process' method='POST'>
-    Email:<input type="text" name="email">    
-    Name:<input type="text" name="urname">
-    Password:<input type="text" name="password">
-    <input type="submit" value="Submit">
-  </form>
 </body>
 </html>

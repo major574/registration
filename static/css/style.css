@@ -1,0 +1,16 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body{
+	margin-top: 50px;
+	margin-left: 100px;
+	width: 840px;
+}
+input{
+	display: block;
+	margin: 10px;
+}
+p{
+	color: red;
+}
